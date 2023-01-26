@@ -62,3 +62,9 @@ request body:
 ```
 - Delete the car by id
 DELETE: `http://localhost:8889/cars/:id`
+
+## Feeling for the project
+- It took for me 2 days.
+- Requirement is very clear. But the template project set up is a bit confused for me at first. My opinion is there is no need to provide the template project setup.
+- Difficulty is 7.
+- I would like to take the leet code style assesment.
