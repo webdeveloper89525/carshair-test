@@ -1,0 +1,27 @@
+version: '3'
+services:
+    backend:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: carserver
+        ports:
+            - "8889:8889"
+        environment:
+            - DATABASE_HOST=db
+            - DATABASE_USER=root
+            - DATABASE_PASSWORD=root
+            - DATABASE_NAME=cartest
+        depends_on:
+            - db
+    db:
+        image: mysql:8
+        environment:
+            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_DATABASE=cartest
+        ports:
+            - "3306:3306"
+        volumes:
+            - dbdata:/var/lib/mysql
+volumes:
+    dbdata:
