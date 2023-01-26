@@ -1,3 +1,4 @@
+import { IsOptional } from "class-validator";
 import { Entity, Column, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
@@ -11,28 +12,47 @@ export class Car {
     @Column("int")
     registrationId: number;
 
-    @Column()
-    registrationState: string;
+    @IsOptional()
+    @Column({nullable: true})
+    registrationState?: string;
 
-    @Column()
-    registrationExpireDate: Date;
+    @IsOptional()
+    @Column({nullable: true})
+    registrationExpireDate?: Date;
 
-    @Column()
-    nameOnRegistration: string;
+    @IsOptional()
+    @Column({nullable: true})
+    nameOnRegistration?: string;
 
     @Column()
     vin: string;
 
-    @Column()
-    carValue: number;
+    @IsOptional()
+    @Column({nullable: true})
+    carValue?: number;
 
-    @Column()
-    currentMileage: number;
+    @IsOptional()
+    @Column({nullable: true})
+    currentMileage?: number;
 
-    @Column()
-    vehicleDescription: string;
+    @IsOptional()
+    @Column({nullable: true, type: "text"})
+    vehicleDescription?: string;
 
-    @Column("text")
-    vehicleColor: string;
+    @IsOptional()
+    @Column({nullable: true})
+    vehicleColor?: string;
+
+    @IsOptional()
+    @Column({nullable: true})
+    model?: string;
+
+    @IsOptional()
+    @Column({nullable: true})
+    make?: string;
+
+    @IsOptional()
+    @Column({nullable: true})
+    year?: string;
 
 }
