@@ -1,4 +1,4 @@
-# carshair-test
+# car-test
 
 ## How to run the project?
 ## Technical Resources
