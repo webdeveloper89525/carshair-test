@@ -15,8 +15,8 @@ AppDataSource.initialize()
         controllers: [CarController], // we specify controllers we want to use
     })
     
-    // run express application on port 3000
-    app.listen(3000);
-    console.log("Server started on port 3000!");
+    // run express application on port 8889
+    app.listen(8889);
+    console.log("Server started on port 8889!");
 })
 .catch((error) => console.log(error));

@@ -11,7 +11,7 @@ export class CarService {
     }
 
     async getOne(id: number) {
-        return await this.carRepository.findOne({id});
+        return await this.carRepository.findOneBy({id});
     }
 
     async create(car: Car) {

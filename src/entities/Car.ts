@@ -5,12 +5,34 @@ export class Car {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column()
-    name: string;
+    @Column("int")
+    licensePlate: number;
+
+    @Column("int")
+    registrationId: number;
 
     @Column()
-    email: string;
+    registrationState: string;
 
     @Column()
-    password: string;
+    registrationExpireDate: Date;
+
+    @Column()
+    nameOnRegistration: string;
+
+    @Column()
+    vin: string;
+
+    @Column()
+    carValue: number;
+
+    @Column()
+    currentMileage: number;
+
+    @Column()
+    vehicleDescription: string;
+
+    @Column("text")
+    vehicleColor: string;
+
 }
