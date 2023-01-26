@@ -32,7 +32,6 @@ export class CarService {
     public async create(car: Car) {
         if (car.vin) {
             const data = await decodeVIN(car.vin) as any;
-            console.log('===', data);
             car.model = data?.model;
             car.year = data?.year;
             car.make = data?.make;
